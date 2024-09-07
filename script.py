@@ -168,7 +168,7 @@ def write_all_user_playlist_tracks_to_csv(user_id):
                 if audio_features:
                     writer.writerow(
                         [playlist_name, track_name, track_id]
-                        + [audio_features[f] for f in features]
+                        + [audio_features[f] for f in TRACK_FEATURES]
                     )
                 else:
                     print(f"Failed to retrieve audio features for track: {track_name}")
